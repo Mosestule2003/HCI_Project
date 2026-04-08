@@ -159,7 +159,87 @@ export default function Presentation() {
         </div>
       </SlideWrapper>
 
-      {/* Slide 3: Problem */}
+      {/* Slide 3: Project Overview */}
+      <SlideWrapper className="bg-muted">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div className="space-y-8">
+            <BlurReveal>
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground font-serif">Project Overview</h2>
+            </BlurReveal>
+
+            <StaggerContainer className="space-y-6">
+              <StaggerItem>
+                <div className="bg-white p-6 rounded-xl border border-border shadow-sm">
+                  <h3 className="text-primary font-bold uppercase tracking-wider text-xs mb-2">Project Purpose</h3>
+                  <p className="text-lg font-medium text-foreground">A mobile app that uses AR to document and verify property conditions.</p>
+                </div>
+              </StaggerItem>
+
+              <StaggerItem>
+                <div className="bg-white p-6 rounded-xl border border-border shadow-sm border-l-4 border-l-red-500">
+                  <h3 className="text-red-600 font-bold uppercase tracking-wider text-xs mb-2">The Problem</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Traditional inspections are slow and subjective. Humans often suffer from <span className="text-foreground font-bold italic">"change blindness,"</span> missing small damages when looking back and forth between a room and a clipboard.
+                  </p>
+                </div>
+              </StaggerItem>
+
+              <StaggerItem>
+                <div className="bg-white p-6 rounded-xl border border-border shadow-sm">
+                  <h3 className="text-secondary font-bold uppercase tracking-wider text-xs mb-2">Target Users</h3>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {["Property Managers", "Landlords", "Inspectors", "Maintenance Staff", "Tenants"].map((user) => (
+                      <span key={user} className="px-3 py-1 bg-muted rounded-full text-xs font-semibold border border-border">{user}</span>
+                    ))}
+                  </div>
+                </div>
+              </StaggerItem>
+            </StaggerContainer>
+          </div>
+
+          <div className="space-y-8 h-full">
+            <BlurReveal delay={0.4}>
+              <div className="bg-primary p-8 rounded-2xl text-white shadow-xl h-full flex flex-col justify-center">
+                <h3 className="text-2xl font-serif mb-8 border-b border-white/20 pb-4 italic">Core Objectives</h3>
+                
+                <div className="grid grid-cols-1 gap-8">
+                  <div className="space-y-4">
+                    <h4 className="text-sm uppercase tracking-widest font-bold text-white/70 flex items-center gap-2">
+                      <span className="w-2 h-2 bg-secondary rounded-full"></span> Usability Goals
+                    </h4>
+                    <ul className="space-y-3">
+                      <li className="flex justify-between items-center border-b border-white/10 pb-2">
+                        <span>Speed up setup time</span>
+                        <span className="text-xl font-bold">75%</span>
+                      </li>
+                      <li className="flex justify-between items-center border-b border-white/10 pb-2">
+                        <span>Damage detection accuracy</span>
+                        <span className="text-xl font-bold">95%</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h4 className="text-sm uppercase tracking-widest font-bold text-white/70 flex items-center gap-2">
+                      <span className="w-2 h-2 bg-accent rounded-full"></span> UX Goals
+                    </h4>
+                    <ul className="space-y-3">
+                      <li className="text-sm leading-relaxed bg-white/10 p-4 rounded-lg italic">
+                        "Create professional reports credible enough for legal disputes."
+                      </li>
+                      <li className="text-sm leading-relaxed bg-white/10 p-4 rounded-lg italic">
+                        "Increase user confidence through clear visual guides and haptic feedback."
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </BlurReveal>
+          </div>
+        </div>
+      </SlideWrapper>
+
+      {/* Slide 4: Problem */}
       <SlideWrapper className="bg-muted">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
@@ -230,7 +310,7 @@ export default function Presentation() {
         </div>
       </SlideWrapper>
 
-      {/* Slide 4: Solution */}
+      {/* Slide 5: Solution */}
       <SlideWrapper className="bg-white">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <BlurReveal>
@@ -277,7 +357,7 @@ export default function Presentation() {
         </div>
       </SlideWrapper>
 
-      {/* Slide 5: System Architecture */}
+      {/* Slide 6: System Architecture */}
       <SlideWrapper className="bg-muted">
         <BlurReveal className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight font-serif">System Architecture</h2>
@@ -322,7 +402,7 @@ export default function Presentation() {
         </BlurReveal>
       </SlideWrapper>
 
-      {/* Slide 6: Demo Onboarding */}
+      {/* Slide 7: Demo Onboarding */}
       <SlideWrapper className="bg-white">
         <BlurReveal className="mb-12">
           <p className="text-sm uppercase tracking-widest text-primary font-bold mb-2">System Demonstration</p>
@@ -355,7 +435,7 @@ export default function Presentation() {
         </div>
       </SlideWrapper>
 
-      {/* Slide 7: Demo Maintenance Crew */}
+      {/* Slide 8: Demo Maintenance Crew */}
       <SlideWrapper className="bg-muted">
         <BlurReveal className="mb-12">
           <p className="text-sm uppercase tracking-widest text-primary font-bold mb-2">System Demonstration</p>
@@ -394,7 +474,7 @@ export default function Presentation() {
         </div>
       </SlideWrapper>
 
-      {/* Slide 8: Demo Property Manager */}
+      {/* Slide 9: Demo Property Manager */}
       <SlideWrapper className="bg-white">
         <BlurReveal className="mb-12">
           <p className="text-sm uppercase tracking-widest text-primary font-bold mb-2">System Demonstration</p>
@@ -428,7 +508,7 @@ export default function Presentation() {
         </div>
       </SlideWrapper>
 
-      {/* Slide 9: Demo Property Owner */}
+      {/* Slide 10: Demo Property Owner */}
       <SlideWrapper className="bg-muted">
          <BlurReveal className="mb-12">
           <p className="text-sm uppercase tracking-widest text-primary font-bold mb-2">System Demonstration</p>
@@ -466,7 +546,7 @@ export default function Presentation() {
         </div>
       </SlideWrapper>
 
-      {/* Slide 10: Evaluation Results */}
+      {/* Slide 11: Evaluation Results */}
       <SlideWrapper className="bg-white">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -529,7 +609,7 @@ export default function Presentation() {
         </div>
       </SlideWrapper>
 
-      {/* Slide 11: Business Model */}
+      {/* Slide 12: Business Model */}
       <SlideWrapper className="bg-muted">
         <BlurReveal className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 font-serif">How Snapcheck Generates Revenue</h2>
@@ -574,7 +654,7 @@ export default function Presentation() {
         </div>
       </SlideWrapper>
 
-      {/* Slide 12: Conclusion */}
+      {/* Slide 13: Conclusion */}
       <SlideWrapper className="bg-primary text-white relative">
         <BlurReveal className="text-center max-w-4xl mx-auto flex flex-col justify-center h-full pt-12 pb-24">
           <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-12 font-serif">
