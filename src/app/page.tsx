@@ -94,9 +94,7 @@ export default function Presentation() {
           >
             {/* Left: Hero Image (Circle) */}
             <div className="flex-shrink-0 w-24 h-24 rounded-full overflow-hidden border-2 border-primary/20 bg-primary/20 mr-8 relative">
-              {/* Image Placeholder */}
-              <div className="absolute inset-0 bg-primary/30 animate-pulse" />
-              {/* Once you have an image, insert it here: <img src="..." className="absolute inset-0 w-full h-full object-cover" /> */}
+              <img src="/moses_profile.jpg" alt="Moses Profile" className="absolute inset-0 w-full h-full object-cover" />
             </div>
 
             {/* Right: Member Details */}
