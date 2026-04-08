@@ -131,8 +131,8 @@ export default function Presentation() {
 
             {/* Right: Member Details */}
             <div className="flex flex-col justify-center">
-              <h3 className="text-xl font-bold text-foreground">Nwosu Nnamdi (Software Design)</h3>
-              <p className="text-muted-foreground text-sm max-w-2xl">Focused on creating Augmented Reality (AR) systems specifically for the short-term rental market.</p>
+              <h3 className="text-xl font-bold text-foreground">Nwosu Nnamdi (Market Research)</h3>
+              <p className="text-muted-foreground text-sm max-w-2xl">Focused on researching the short-term rental market and understanding how our design implements AR technology.</p>
             </div>
           </motion.div>
 
