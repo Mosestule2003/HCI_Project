@@ -87,7 +87,56 @@ export default function Presentation() {
         </div>
       </SlideWrapper>
 
-      {/* Slide 2: Problem */}
+      {/* Slide 2: Team Information */}
+      <SlideWrapper className="bg-white">
+        <BlurReveal className="mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight font-serif">Team Information</h2>
+        </BlurReveal>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative w-full max-w-5xl mx-auto overflow-hidden bg-muted rounded-[100px] border border-border shadow-2xl flex flex-col md:flex-row items-stretch"
+          style={{ minHeight: '400px' }}
+        >
+          {/* Left: Hero Image (Cylindrical edge) */}
+          <div className="w-full md:w-1/3 relative h-64 md:h-auto overflow-hidden border-r border-border">
+            <img 
+              src="/Property_Owner_01.jpg" 
+              alt="Team Hero" 
+              className="absolute inset-0 w-full h-full object-cover" 
+            />
+            <div className="absolute inset-0 bg-primary/10 mix-blend-multiply" />
+          </div>
+
+          {/* Right: Team Details */}
+          <div className="w-full md:w-2/3 p-12 flex flex-col justify-center space-y-8">
+            <StaggerContainer className="space-y-6">
+              <StaggerItem>
+                <div className="flex flex-col">
+                  <h3 className="text-xl font-bold text-foreground">Kpughur-Tule Tertsegha Moses (Project Lead)</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">Lead for technical strategy and project management. He bridges the gap between complex software requirements and user needs.</p>
+                </div>
+              </StaggerItem>
+              <StaggerItem>
+                <div className="flex flex-col border-t border-border/50 pt-4">
+                  <h3 className="text-xl font-bold text-foreground">Nwosu Nnamdi (Software Design)</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">Focused on creating Augmented Reality (AR) systems specifically for the short-term rental market.</p>
+                </div>
+              </StaggerItem>
+              <StaggerItem>
+                <div className="flex flex-col border-t border-border/50 pt-4">
+                  <h3 className="text-xl font-bold text-foreground">Abdul Adigun (Technical Design)</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">Managed system architecture, feasibility analysis, and identified the target user base.</p>
+                </div>
+              </StaggerItem>
+            </StaggerContainer>
+          </div>
+        </motion.div>
+      </SlideWrapper>
+
+      {/* Slide 3: Problem */}
       <SlideWrapper className="bg-muted">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
@@ -158,7 +207,7 @@ export default function Presentation() {
         </div>
       </SlideWrapper>
 
-      {/* Slide 3: Solution */}
+      {/* Slide 4: Solution */}
       <SlideWrapper className="bg-white">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <BlurReveal>
@@ -205,7 +254,7 @@ export default function Presentation() {
         </div>
       </SlideWrapper>
 
-      {/* Slide 4: System Architecture */}
+      {/* Slide 5: System Architecture */}
       <SlideWrapper className="bg-muted">
         <BlurReveal className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight font-serif">System Architecture</h2>
@@ -250,7 +299,7 @@ export default function Presentation() {
         </BlurReveal>
       </SlideWrapper>
 
-      {/* Slide 5: Demo Onboarding */}
+      {/* Slide 6: Demo Onboarding */}
       <SlideWrapper className="bg-white">
         <BlurReveal className="mb-12">
           <p className="text-sm uppercase tracking-widest text-primary font-bold mb-2">System Demonstration</p>
@@ -283,7 +332,7 @@ export default function Presentation() {
         </div>
       </SlideWrapper>
 
-      {/* Slide 6: Demo Maintenance Crew */}
+      {/* Slide 7: Demo Maintenance Crew */}
       <SlideWrapper className="bg-muted">
         <BlurReveal className="mb-12">
           <p className="text-sm uppercase tracking-widest text-primary font-bold mb-2">System Demonstration</p>
@@ -322,7 +371,7 @@ export default function Presentation() {
         </div>
       </SlideWrapper>
 
-      {/* Slide 7: Demo Property Manager */}
+      {/* Slide 8: Demo Property Manager */}
       <SlideWrapper className="bg-white">
         <BlurReveal className="mb-12">
           <p className="text-sm uppercase tracking-widest text-primary font-bold mb-2">System Demonstration</p>
@@ -356,7 +405,7 @@ export default function Presentation() {
         </div>
       </SlideWrapper>
 
-      {/* Slide 8: Demo Property Owner */}
+      {/* Slide 9: Demo Property Owner */}
       <SlideWrapper className="bg-muted">
          <BlurReveal className="mb-12">
           <p className="text-sm uppercase tracking-widest text-primary font-bold mb-2">System Demonstration</p>
@@ -394,7 +443,7 @@ export default function Presentation() {
         </div>
       </SlideWrapper>
 
-      {/* Slide 9: Evaluation Results */}
+      {/* Slide 10: Evaluation Results */}
       <SlideWrapper className="bg-white">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -457,7 +506,7 @@ export default function Presentation() {
         </div>
       </SlideWrapper>
 
-      {/* Slide 10: Business Model */}
+      {/* Slide 11: Business Model */}
       <SlideWrapper className="bg-muted">
         <BlurReveal className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 font-serif">How Snapcheck Generates Revenue</h2>
@@ -502,7 +551,7 @@ export default function Presentation() {
         </div>
       </SlideWrapper>
 
-      {/* Slide 11: Conclusion */}
+      {/* Slide 12: Conclusion */}
       <SlideWrapper className="bg-primary text-white relative">
         <BlurReveal className="text-center max-w-4xl mx-auto flex flex-col justify-center h-full pt-12 pb-24">
           <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-12 font-serif">
