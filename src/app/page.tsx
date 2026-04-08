@@ -8,6 +8,8 @@ import { BlurReveal, StaggerContainer, StaggerItem, InteractiveCard, TextTypingE
 import { Counter } from "@/components/Counter";
 
 import { RedditFeed } from "@/components/RedditFeed";
+import { SkylineAnimation } from "@/components/SkylineAnimation";
+
 
 export default function Presentation() {
   const { scrollYProgress } = useScroll();
@@ -72,21 +74,8 @@ export default function Presentation() {
           </StaggerItem>
         </StaggerContainer>
 
-        {/* CDN-style SVG network outline at the bottom, 20% opacity */}
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden pointer-events-none opacity-20 text-accent">
-          <svg viewBox="0 0 1200 200" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
-            <path d="M-100 150 L150 100 L300 180 L450 80 L600 140 L750 90 L900 160 L1050 60 L1300 120" stroke="currentColor" strokeWidth="2" />
-            <circle cx="150" cy="100" r="4" fill="currentColor" />
-            <circle cx="300" cy="180" r="4" fill="currentColor" />
-            <circle cx="450" cy="80" r="4" fill="currentColor" />
-            <circle cx="600" cy="140" r="4" fill="currentColor" />
-            <circle cx="750" cy="90" r="4" fill="currentColor" />
-            <circle cx="900" cy="160" r="4" fill="currentColor" />
-            <circle cx="1050" cy="60" r="4" fill="currentColor" />
-            {/* Connecting subtle vertical lines */}
-            <path d="M150 200 L150 100 M300 200 L300 180 M450 200 L450 80 M600 200 L600 140 M750 200 L750 90 M900 200 L900 160 M1050 200 L1050 60" stroke="currentColor" strokeWidth="1" strokeDasharray="4 4" />
-          </svg>
-        </div>
+        <SkylineAnimation />
+
       </SlideWrapper>
 
       {/* Slide 2: Team Information */}
