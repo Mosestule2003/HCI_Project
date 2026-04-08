@@ -160,246 +160,199 @@ export default function Presentation() {
       </SlideWrapper>
 
       {/* Slide 3: Project Overview */}
-      <SlideWrapper className="bg-muted">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          <div className="space-y-8">
-            <BlurReveal>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground font-serif">Project Overview</h2>
-            </BlurReveal>
+      {/* Slide 3: Project Overview */}
+      <SlideWrapper className="bg-white">
+        <div className="max-w-6xl mx-auto space-y-8 md:space-y-12">
+          <BlurReveal>
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground font-serif leading-tight mb-2">
+              Project Overview
+            </h2>
+          </BlurReveal>
 
-            <StaggerContainer className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            <StaggerContainer className="col-span-1 space-y-6 md:space-y-10">
               <StaggerItem>
-                <div className="bg-white p-6 rounded-xl border border-border shadow-sm">
-                  <h3 className="text-primary font-bold uppercase tracking-wider text-xs mb-2">Project Purpose</h3>
-                  <p className="text-lg font-medium text-foreground">A mobile app that uses AR to document and verify property conditions.</p>
-                </div>
-              </StaggerItem>
-
-              <StaggerItem>
-                <div className="bg-white p-6 rounded-xl border border-border shadow-sm border-l-4 border-l-red-500">
-                  <h3 className="text-red-600 font-bold uppercase tracking-wider text-xs mb-2">The Problem</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    Traditional inspections are slow and subjective. Humans often suffer from <span className="text-foreground font-bold italic">"change blindness,"</span> missing small damages when looking back and forth between a room and a clipboard.
+                <div className="space-y-2 md:space-y-4">
+                  <h4 className="text-[10px] md:text-xs uppercase tracking-widest font-black text-foreground border-b border-foreground/20 pb-1 md:pb-2">Core Purpose</h4>
+                  <p className="text-lg md:text-xl font-medium text-muted-foreground leading-snug md:leading-relaxed">
+                    A professional-grade mobile ecosystem that utilizes Augmented Reality to create 
+                    verifiable, objective records of property conditions.
                   </p>
                 </div>
               </StaggerItem>
 
               <StaggerItem>
-                <div className="bg-white p-6 rounded-xl border border-border shadow-sm">
-                  <h3 className="text-secondary font-bold uppercase tracking-wider text-xs mb-2">Target Users</h3>
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    {["Property Managers", "Landlords", "Inspectors", "Maintenance Staff", "Tenants"].map((user) => (
-                      <span key={user} className="px-3 py-1 bg-muted rounded-full text-xs font-semibold border border-border">{user}</span>
-                    ))}
-                  </div>
+                <div className="space-y-2 md:space-y-4">
+                  <h4 className="text-[10px] md:text-xs uppercase tracking-widest font-black text-foreground border-b border-foreground/20 pb-1 md:pb-2">Target Audience</h4>
+                  <p className="text-base md:text-lg text-muted-foreground font-medium leading-tight">
+                    Property Managers, Landlords, Professional Inspectors, and Maintenance Teams.
+                  </p>
                 </div>
               </StaggerItem>
             </StaggerContainer>
-          </div>
 
-          <div className="space-y-8 h-full">
-            <BlurReveal delay={0.4}>
-              <div className="bg-primary p-8 rounded-2xl text-white shadow-xl h-full flex flex-col justify-center">
-                <h3 className="text-2xl font-serif mb-8 border-b border-white/20 pb-4 italic">Core Objectives</h3>
-                
-                <div className="grid grid-cols-1 gap-8">
-                  <div className="space-y-4">
-                    <h4 className="text-sm uppercase tracking-widest font-bold text-white/70 flex items-center gap-2">
-                      <span className="w-2 h-2 bg-secondary rounded-full"></span> Usability Goals
-                    </h4>
-                    <ul className="space-y-3">
-                      <li className="flex justify-between items-center border-b border-white/10 pb-2">
-                        <span>Speed up setup time</span>
-                        <span className="text-xl font-bold">75%</span>
-                      </li>
-                      <li className="flex justify-between items-center border-b border-white/10 pb-2">
-                        <span>Damage detection accuracy</span>
-                        <span className="text-xl font-bold">95%</span>
-                      </li>
-                    </ul>
-                  </div>
+            <StaggerContainer className="col-span-1 md:col-span-2 space-y-8 md:space-y-10">
+               <StaggerItem>
+                 <div className="bg-muted p-6 md:p-8 rounded-2xl border border-border shadow-sm space-y-4">
+                    <h4 className="text-[10px] md:text-xs uppercase tracking-widest font-black text-foreground">The Problem</h4>
+                    <p className="text-xl md:text-2xl font-bold text-foreground font-serif leading-tight">
+                      Manual inspections are slow and fundamentally subjective. 
+                    </p>
+                    <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                      Human inspectors frequently suffer from <span className="text-foreground font-bold underline decoration-primary decoration-2 underline-offset-4 italic whitespace-nowrap">"Change Blindness"</span>—a cognitive limitation 
+                      where subtle changes in property state are overlooked when transitioning between physical observation and traditional documentation tools.
+                    </p>
+                 </div>
+               </StaggerItem>
 
-                  <div className="space-y-4">
-                    <h4 className="text-sm uppercase tracking-widest font-bold text-white/70 flex items-center gap-2">
-                      <span className="w-2 h-2 bg-accent rounded-full"></span> UX Goals
-                    </h4>
-                    <ul className="space-y-3">
-                      <li className="text-sm leading-relaxed bg-white/10 p-4 rounded-lg italic">
-                        "Create professional reports credible enough for legal disputes."
-                      </li>
-                      <li className="text-sm leading-relaxed bg-white/10 p-4 rounded-lg italic">
-                        "Increase user confidence through clear visual guides and haptic feedback."
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </BlurReveal>
+               <StaggerItem>
+                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+                    <div className="p-6 md:p-8 border border-border rounded-xl space-y-2 md:space-y-4">
+                      <h4 className="text-[10px] md:text-xs uppercase tracking-widest font-black text-foreground">Performance Targets</h4>
+                      <div className="flex items-baseline gap-2">
+                        <span className="text-3xl md:text-4xl font-black text-foreground whitespace-nowrap">75%</span>
+                        <span className="text-[10px] md:text-xs text-muted-foreground font-medium">Faster Setup</span>
+                      </div>
+                      <div className="flex items-baseline gap-2 pt-1 md:pt-2">
+                        <span className="text-3xl md:text-4xl font-black text-foreground whitespace-nowrap">95%</span>
+                        <span className="text-[10px] md:text-xs text-muted-foreground font-medium">Detection Accuracy</span>
+                      </div>
+                    </div>
+
+                    <div className="p-6 md:p-8 border border-border rounded-xl space-y-2 md:space-y-4">
+                      <h4 className="text-[10px] md:text-xs uppercase tracking-widest font-black text-foreground">UX Objectives</h4>
+                      <ul className="space-y-2">
+                        <li className="text-xs md:text-sm font-bold text-muted-foreground flex items-start gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-1.5 flex-shrink-0"></span>
+                          Legally credible documentation.
+                        </li>
+                        <li className="text-xs md:text-sm font-bold text-muted-foreground flex items-start gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-1.5 flex-shrink-0"></span>
+                          Enhanced field confidence using haptic and visual cues.
+                        </li>
+                      </ul>
+                    </div>
+                 </div>
+               </StaggerItem>
+            </StaggerContainer>
           </div>
         </div>
       </SlideWrapper>
 
-      {/* Slide 4: Problem */}
-      <SlideWrapper className="bg-muted">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8">
-            <BlurReveal>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground font-serif">
-                The Problem:<br/>Inspection Inefficiency
-              </h2>
-            </BlurReveal>
-            
-            <StaggerContainer className="space-y-6 pt-4">
-              <StaggerItem>
-                <div className="flex gap-4">
-                  <span className="text-primary font-bold">01</span>
-                  <p className="text-lg text-foreground">Property managers handling 50+ units operate under tight turnover windows</p>
-                </div>
-              </StaggerItem>
-              <StaggerItem>
-                 <div className="flex gap-4">
-                  <span className="text-primary font-bold">02</span>
-                  <p className="text-lg text-foreground">Inspectors rely on memory when comparing property states</p>
-                </div>
-              </StaggerItem>
-              <StaggerItem>
-                 <div className="flex gap-4">
-                  <span className="text-primary font-bold">03</span>
-                  <p className="text-lg text-foreground">Repeated device-to-room switching leads to missed details</p>
-                </div>
-              </StaggerItem>
-              <StaggerItem>
-                 <div className="flex gap-4">
-                  <span className="text-primary font-bold">04</span>
-                  <p className="text-lg text-foreground">Documentation inconsistencies create disputes between stakeholders</p>
-                </div>
-              </StaggerItem>
-              <StaggerItem>
-                 <div className="flex gap-4">
-                  <span className="text-primary font-bold">05</span>
-                  <p className="text-lg text-foreground font-bold">Average turnover-related costs can reach ~$2,500 per unit</p>
-                </div>
-              </StaggerItem>
-            </StaggerContainer>
-          </div>
-          
-          <BlurReveal delay={0.4} className="h-full">
-            <InteractiveCard className="p-8 bg-white h-full flex flex-col justify-center border-none shadow-xl">
-              <div className="flex flex-col space-y-6 text-center">
-                <div className="p-6 border border-border rounded-lg bg-red-50 text-red-900">
-                  <span className="font-bold block uppercase tracking-widest text-xs mb-2">Phase 1</span>
-                  <p>Subjective Checkout</p>
-                </div>
-                <div className="h-8 w-px bg-border mx-auto relative">
-                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-muted-foreground text-xs">↓</div>
-                </div>
-                <div className="p-6 border border-border rounded-lg bg-orange-50 text-orange-900">
-                  <span className="font-bold block uppercase tracking-widest text-xs mb-2">Phase 2</span>
-                  <p>Inconsistent Inspection</p>
-                </div>
-                <div className="h-8 w-px bg-border mx-auto relative">
-                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-muted-foreground text-xs">↓</div>
-                </div>
-                <div className="p-6 border border-border rounded-lg bg-yellow-50 text-yellow-900">
-                  <span className="font-bold block uppercase tracking-widest text-xs mb-2">Phase 3</span>
-                  <p>Disputed Cleaning/Billing</p>
-                </div>
-              </div>
-            </InteractiveCard>
-          </BlurReveal>
-        </div>
-      </SlideWrapper>
-
-      {/* Slide 5: Solution */}
+      {/* Slide 4: Requirements & User Research */}
+      {/* Slide 4: Requirements & User Research */}
       <SlideWrapper className="bg-white">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto h-full flex flex-col justify-center py-2 md:py-4">
           <BlurReveal>
-            <InteractiveCard className="p-12 bg-primary text-white border-none text-center shadow-2xl h-full flex flex-col justify-center">
-               <h3 className="text-3xl font-serif mb-6 leading-tight">Snapcheck replaces subjective inspection processes with structured, verifiable workflows.</h3>
-               <div className="w-16 h-1 bg-secondary mx-auto mt-4"></div>
-            </InteractiveCard>
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-foreground font-serif">Requirements & User Research</h2>
+            <div className="w-12 md:w-16 h-1 bg-primary mt-1 md:mt-2 mb-4 md:mb-6"></div>
           </BlurReveal>
-          
-          <div>
-            <BlurReveal>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-12 font-serif">
-                The Solution: Snapcheck
-              </h2>
-            </BlurReveal>
-            
-            <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-              <StaggerItem>
-                <div className="border-l-4 border-primary pl-4 py-2">
-                  <h4 className="font-bold text-lg mb-2">AR Comparison</h4>
-                  <p className="text-muted-foreground text-sm">Visual discrepancy system driven by augmented reality</p>
-                </div>
-              </StaggerItem>
-              <StaggerItem>
-                <div className="border-l-4 border-secondary pl-4 py-2">
-                  <h4 className="font-bold text-lg mb-2">Baseline Overlay</h4>
-                  <p className="text-muted-foreground text-sm">Overlay of historic property state onto live camera view</p>
-                </div>
-              </StaggerItem>
-              <StaggerItem>
-                <div className="border-l-4 border-accent pl-4 py-2">
-                  <h4 className="font-bold text-lg mb-2">Real-Time Detection</h4>
-                  <p className="text-muted-foreground text-sm">Instantaneous tracking of structural discrepancies</p>
-                </div>
-              </StaggerItem>
-              <StaggerItem>
-                <div className="border-l-4 border-primary pl-4 py-2">
-                  <h4 className="font-bold text-lg mb-2">Structured Evidence</h4>
-                  <p className="text-muted-foreground text-sm">Categorized spatial tagging and cloud synchronization</p>
-                </div>
-              </StaggerItem>
-            </StaggerContainer>
+
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6 mb-6 md:mb-8">
+            <StaggerItem>
+              <InteractiveCard className="p-3 md:p-5 bg-muted/50 border-none h-full">
+                <h3 className="text-base md:text-lg font-bold mb-1 md:mb-2 flex items-center gap-2">
+                  <span className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-primary text-white flex items-center justify-center text-[10px] md:text-xs">01</span>
+                  Personas
+                </h3>
+                <p className="text-[10px] md:text-sm text-muted-foreground leading-tight">
+                  <span className="font-bold text-foreground">Sarah (34):</span> Manager in Kamloops. Oversees 50 units with a <span className="text-primary font-bold">4-hour window</span> for turnovers.
+                </p>
+              </InteractiveCard>
+            </StaggerItem>
+
+            <StaggerItem>
+              <InteractiveCard className="p-3 md:p-5 bg-muted/50 border-none h-full">
+                <h3 className="text-base md:text-lg font-bold mb-1 md:mb-2 flex items-center gap-2">
+                  <span className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-secondary text-white flex items-center justify-center text-[10px] md:text-xs">02</span>
+                  Data Gathering
+                </h3>
+                <p className="text-[10px] md:text-sm text-muted-foreground leading-tight">
+                  We conducted qualitative research using <span className="font-bold text-foreground">Reddit and industry data sources</span>, analyzing discussions from hosts, guests, and maintenance professionals in short-term rentals.
+                </p>
+              </InteractiveCard>
+            </StaggerItem>
+
+            <StaggerItem>
+              <InteractiveCard className="p-3 md:p-5 bg-muted/50 border-none h-full">
+                <h3 className="text-base md:text-lg font-bold mb-1 md:mb-2 flex items-center gap-2">
+                  <span className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-accent text-white flex items-center justify-center text-[10px] md:text-xs">03</span>
+                  Key Insights
+                </h3>
+                <p className="text-[9px] md:text-[11px] text-muted-foreground leading-tight italic">
+                  "Courts rule in favor of the party that provides clearer, more credible documentation..."
+                  <span className="block mt-1 not-italic font-bold text-foreground">— CCS Risk Services, n.d.</span>
+                </p>
+              </InteractiveCard>
+            </StaggerItem>
+          </StaggerContainer>
+
+          <div className="space-y-2 md:space-y-4">
+            <h3 className="text-lg md:text-xl font-bold font-serif text-foreground">Storyboard</h3>
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.98 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              className="relative w-full overflow-hidden rounded-lg border border-border shadow-lg bg-white"
+            >
+              <img 
+                src="/storyboard.png" 
+                alt="Snapcheck Storyboard" 
+                className="w-full h-auto object-contain max-h-[40vh] md:max-h-[55vh]" 
+              />
+            </motion.div>
           </div>
         </div>
       </SlideWrapper>
 
-      {/* Slide 6: System Architecture */}
+      {/* Slide 5: Design Process */}
       <SlideWrapper className="bg-muted">
-        <BlurReveal className="mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight font-serif">System Architecture</h2>
-        </BlurReveal>
+        <div className="max-w-7xl mx-auto h-full flex flex-col justify-center py-8">
+          <BlurReveal>
+            <p className="text-sm uppercase tracking-widest text-primary font-bold mb-2">Architectural Evolution</p>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground font-serif">Design Process</h2>
+            <div className="w-20 h-1 md:h-1.5 bg-primary mt-4 mb-8 md:mb-12"></div>
+          </BlurReveal>
 
-        <BlurReveal delay={0.2} className="max-w-6xl mx-auto w-full">
-           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8">
-              <InteractiveCard className="bg-white p-6 shadow-md border-t-4 border-t-primary">
-                <span className="text-xs uppercase tracking-widest text-primary font-bold mb-4 block">01</span>
-                <h3 className="text-xl font-bold mb-4">Frontend</h3>
-                <p className="text-sm text-muted-foreground">High-fidelity iOS prototype tailored for mobile fieldwork.</p>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <StaggerItem>
+              <InteractiveCard className="p-6 md:p-8 bg-white h-full border-none shadow-lg">
+                <h3 className="text-xl font-bold mb-4 text-primary">Design Choices</h3>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                  We compared split-screens and blinking images but chose a <span className="font-bold text-foreground">"Transparent Overlay" (Ghost Image)</span>. This approach makes discrepancies visually "pop" in real-time.
+                </p>
               </InteractiveCard>
-              <InteractiveCard className="bg-white p-6 shadow-md border-t-4 border-t-secondary">
-                <span className="text-xs uppercase tracking-widest text-secondary font-bold mb-4 block">02</span>
-                <h3 className="text-xl font-bold mb-4">AR Interface</h3>
-                <ul className="text-sm text-muted-foreground space-y-2 list-disc list-inside">
-                  <li>Edge alignment system</li>
-                  <li>Transparency control</li>
-                </ul>
+            </StaggerItem>
+
+            <StaggerItem>
+              <InteractiveCard className="p-6 md:p-8 bg-white h-full border-none shadow-lg">
+                <h3 className="text-xl font-bold mb-4 text-secondary">Prototyping Iterations</h3>
+                <div className="space-y-4">
+                  <div>
+                    <span className="text-xs md:text-sm uppercase font-black tracking-widest text-muted-foreground">Low-Fidelity</span>
+                    <p className="text-xs md:text-sm text-foreground mt-1">Simple wireframes tested if the "Ghost Image" metaphor was intuitive for users.</p>
+                  </div>
+                  <div>
+                    <span className="text-xs md:text-sm uppercase font-black tracking-widest text-muted-foreground">High-Fidelity</span>
+                    <p className="text-xs md:text-sm text-foreground mt-1">Developed a polished Figma prototype using a <span className="text-primary font-bold">"Pulse Neon"</span> design system for high visual consistency.</p>
+                  </div>
+                </div>
               </InteractiveCard>
-              <InteractiveCard className="bg-white p-6 shadow-md border-t-4 border-t-accent">
-                <span className="text-xs uppercase tracking-widest text-accent font-bold mb-4 block">03</span>
-                <h3 className="text-xl font-bold mb-4">Spatial Anchoring</h3>
-                <ul className="text-sm text-muted-foreground space-y-2 list-disc list-inside">
-                  <li>Location-based issue tagging</li>
-                </ul>
+            </StaggerItem>
+
+            <StaggerItem className="md:col-span-2">
+              <InteractiveCard className="p-6 bg-primary text-white border-none shadow-xl">
+                <h3 className="text-lg md:text-xl font-bold mb-2 flex items-center gap-3">
+                  <span className="p-2 bg-white/20 rounded-lg">⚠️</span>
+                  Challenges
+                </h3>
+                <p className="text-white/90 italic text-base md:text-lg">
+                  "Ensuring the AR overlay stayed perfectly anchored to the room as the user moves."
+                </p>
               </InteractiveCard>
-              <InteractiveCard className="bg-white p-6 shadow-md border-t-4 border-t-foreground">
-                <span className="text-xs uppercase tracking-widest text-foreground font-bold mb-4 block">04</span>
-                <h3 className="text-xl font-bold mb-4">Backend</h3>
-                <ul className="text-sm text-muted-foreground space-y-2 list-disc list-inside">
-                  <li>Automated report generation</li>
-                  <li>Cloud synchronization</li>
-                </ul>
-              </InteractiveCard>
-           </div>
-           
-           {/* Connecting visual metaphor */}
-           <div className="mt-8 relative h-12 w-full flex items-center justify-center">
-             <div className="absolute w-[80%] h-0.5 bg-gradient-to-r from-primary via-secondary to-foreground"></div>
-           </div>
-        </BlurReveal>
+            </StaggerItem>
+          </StaggerContainer>
+        </div>
       </SlideWrapper>
 
       {/* Slide 7: Demo Onboarding */}
