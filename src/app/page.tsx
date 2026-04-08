@@ -89,51 +89,74 @@ export default function Presentation() {
 
       {/* Slide 2: Team Information */}
       <SlideWrapper className="bg-white">
-        <BlurReveal className="mb-16">
+        <BlurReveal className="mb-12">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight font-serif">Team Information</h2>
         </BlurReveal>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="relative w-full max-w-5xl mx-auto overflow-hidden bg-muted rounded-[100px] border border-border shadow-2xl flex flex-col md:flex-row items-stretch"
-          style={{ minHeight: '400px' }}
-        >
-          {/* Left: Hero Image (Cylindrical edge) */}
-          <div className="w-full md:w-1/3 relative h-64 md:h-auto overflow-hidden border-r border-border">
-            <img 
-              src="/Property_Owner_01.jpg" 
-              alt="Team Hero" 
-              className="absolute inset-0 w-full h-full object-cover" 
-            />
-            <div className="absolute inset-0 bg-primary/10 mix-blend-multiply" />
-          </div>
+        <div className="flex flex-col space-y-6 w-full max-w-5xl mx-auto">
+          {/* Member 1: Moses */}
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="relative w-full overflow-hidden bg-muted rounded-full border border-border shadow-md flex items-center p-4 pr-12"
+          >
+            {/* Left: Hero Image (Circle) */}
+            <div className="flex-shrink-0 w-24 h-24 rounded-full overflow-hidden border-2 border-primary/20 bg-primary/20 mr-8 relative">
+                {/* Image Placeholder */}
+                <div className="absolute inset-0 bg-primary/30 animate-pulse" />
+                {/* Once you have an image, insert it here: <img src="..." className="absolute inset-0 w-full h-full object-cover" /> */}
+            </div>
 
-          {/* Right: Team Details */}
-          <div className="w-full md:w-2/3 p-12 flex flex-col justify-center space-y-8">
-            <StaggerContainer className="space-y-6">
-              <StaggerItem>
-                <div className="flex flex-col">
-                  <h3 className="text-xl font-bold text-foreground">Kpughur-Tule Tertsegha Moses (Project Lead)</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">Lead for technical strategy and project management. He bridges the gap between complex software requirements and user needs.</p>
-                </div>
-              </StaggerItem>
-              <StaggerItem>
-                <div className="flex flex-col border-t border-border/50 pt-4">
-                  <h3 className="text-xl font-bold text-foreground">Nwosu Nnamdi (Software Design)</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">Focused on creating Augmented Reality (AR) systems specifically for the short-term rental market.</p>
-                </div>
-              </StaggerItem>
-              <StaggerItem>
-                <div className="flex flex-col border-t border-border/50 pt-4">
-                  <h3 className="text-xl font-bold text-foreground">Abdul Adigun (Technical Design)</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">Managed system architecture, feasibility analysis, and identified the target user base.</p>
-                </div>
-              </StaggerItem>
-            </StaggerContainer>
-          </div>
-        </motion.div>
+            {/* Right: Member Details */}
+            <div className="flex flex-col justify-center">
+              <h3 className="text-xl font-bold text-foreground">Kpughur-Tule Tertsegha Moses (Project Lead)</h3>
+              <p className="text-muted-foreground text-sm max-w-2xl">Lead for technical strategy and project management. He bridges the gap between complex software requirements and user needs.</p>
+            </div>
+          </motion.div>
+
+          {/* Member 2: Nnamdi */}
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative w-full overflow-hidden bg-muted rounded-full border border-border shadow-md flex items-center p-4 pr-12"
+          >
+             {/* Left: Hero Image (Circle) */}
+             <div className="flex-shrink-0 w-24 h-24 rounded-full overflow-hidden border-2 border-secondary/20 bg-secondary/20 mr-8 relative">
+                {/* Image Placeholder */}
+                <div className="absolute inset-0 bg-secondary/30 animate-pulse" />
+                {/* Once you have an image, insert it here: <img src="..." className="absolute inset-0 w-full h-full object-cover" /> */}
+            </div>
+
+            {/* Right: Member Details */}
+            <div className="flex flex-col justify-center">
+              <h3 className="text-xl font-bold text-foreground">Nwosu Nnamdi (Software Design)</h3>
+              <p className="text-muted-foreground text-sm max-w-2xl">Focused on creating Augmented Reality (AR) systems specifically for the short-term rental market.</p>
+            </div>
+          </motion.div>
+
+          {/* Member 3: Abdul */}
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="relative w-full overflow-hidden bg-muted rounded-full border border-border shadow-md flex items-center p-4 pr-12"
+          >
+             {/* Left: Hero Image (Circle) */}
+             <div className="flex-shrink-0 w-24 h-24 rounded-full overflow-hidden border-2 border-accent/20 bg-accent/20 mr-8 relative">
+                {/* Image Placeholder */}
+                <div className="absolute inset-0 bg-accent/30 animate-pulse" />
+                {/* Once you have an image, insert it here: <img src="..." className="absolute inset-0 w-full h-full object-cover" /> */}
+            </div>
+
+            {/* Right: Member Details */}
+            <div className="flex flex-col justify-center">
+              <h3 className="text-xl font-bold text-foreground">Abdul Adigun (Technical Design)</h3>
+              <p className="text-muted-foreground text-sm max-w-2xl">Managed system architecture, feasibility analysis, and identified the target user base.</p>
+            </div>
+          </motion.div>
+        </div>
       </SlideWrapper>
 
       {/* Slide 3: Problem */}
